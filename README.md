@@ -1,42 +1,31 @@
 
-# dyte-task
+# Dyte-backend-task
 <h2> Two Methods <h2>
-    <ul><a href="https://github.com/dev5151/Dyte-Backend-Task/tree/master/method-1">Method 1 --> Using Moleculer template</a></ul> <ul>Method 2 --> Using Manual Mongo DB and Broker from Moleculer</ul>
+    <ul><a href="https://github.com/dev5151/Dyte-Backend-Task/tree/master/method-1">Method 1 --> Using Moleculer template</a></ul> <ul><a href="https://github.com/dev5151/Dyte-Backend-Task/tree/master/method-2">Method 2 --> Using Manual Mongo DB and Broker from Moleculer</a></ul>
 
-## Usage
-Start the project with `npm run dev` command. 
+## Usage Mehtod-1
+    cd method-1
+    Start the project with `npm run dev` command. 
 After starting, open the http://localhost:3000/ URL in your browser. 
-On the welcome page you can test the generated services via API Gateway and check the nodes & services.
-
-In the terminal, try the following commands:
-- `nodes` - List all connected nodes.
-- `actions` - List all registered service actions.
-- `call greeter.hello` - Call the `greeter.hello` action.
-- `call greeter.welcome --name John` - Call the `greeter.welcome` action with the `name` parameter.
-- `call products.list` - List the products (call the `products.list` action).
-
 
 ## Services
 - **api**: API Gateway services
-- **greeter**: Sample service with `hello` and `welcome` actions.
-- **products**: Sample DB service. To use with MongoDB, set `MONGO_URI` environment variables and install MongoDB adapter with `npm i moleculer-db-adapter-mongo`.
+- **webhooks**: WEBHOOKS DB`.
+    
+## Routes
+ ![alt text](https://github.com/dev5151/Dyte-Backend-Task/blob/master/method-1/list.png)
+   ---------------------------------------------------------------------------------------- 
+    
+## Usage Mehtod-2
+    cd method-2
+    Create a file .env in the directory and add DB_URL and PORT number to it.
+    Start the project with `node server.js` command. 
+After starting, open the http://localhost:3000/ URL in your browser. 
 
-## Mixins
-- **db.mixin**: Database access mixin for services. Based on [moleculer-db](https://github.com/moleculerjs/moleculer-db#readme)
-
-
-## Useful links
-
-* Moleculer website: https://moleculer.services/
-* Moleculer Documentation: https://moleculer.services/docs/0.14/
 
 ## NPM scripts
 
 - `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
-- `npm run start`: Start production mode (set `SERVICES` env variable to load certain services)
-- `npm run cli`: Start a CLI and connect to production. Don't forget to set production namespace with `--ns` argument in script
-- `npm run lint`: Run ESLint
-- `npm run ci`: Run continuous test mode with watching
-- `npm test`: Run tests & generate coverage report
+- `npm run start`: Start production mode (set `SERVICES` env variable to load certain services
 - `npm run dc:up`: Start the stack with Docker Compose
 - `npm run dc:down`: Stop the stack with Docker Compose
