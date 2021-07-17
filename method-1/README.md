@@ -1,7 +1,7 @@
-[![Moleculer](https://badgen.net/badge/Powered%20by/Moleculer/0e83cd)](https://moleculer.services)
 
 # dyte-task
-This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
+<h2> Two Methods <h2>
+    <ul>Method 1 --> Using Moleculer template</ul> <ul>Method 2 --> Using Manual Mongo DB and Broker from Moleculer</ul>
 
 ## Usage
 Start the project with `npm run dev` command. 
