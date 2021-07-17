@@ -6,16 +6,17 @@ const axios = require('axios');
 module.exports = {
 	name: "webhooks",
 	actions: {
-
-		async register(ctx) {
+        async register(ctx) {
 			var id = nanoid(10).toString();
-            console.log(ctx.params.url);
-            await Webhook.create({_id: id, url: ctx.params.url}, function(err,res){
-                 if(err){
-					console.log(err);
-				 };
-            })
-			return id+ctx.params.url;
+        
+            await Webhook.create({_id: id, url: ctx.params.url }, function(err,res){
+                if(err){
+                   console.log(err);
+                }else{
+                    console.log(res);
+                }
+           })
+           return id;
 		},
 
 		async update(ctx) {

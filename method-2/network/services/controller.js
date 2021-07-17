@@ -1,5 +1,4 @@
 const url = require('url');
-const services=require('../services/services')
 
 const { ServiceBroker } = require("moleculer");
 const broker = new ServiceBroker({
@@ -11,17 +10,19 @@ broker.loadService(__dirname + "/services.js");
 
 // register a webhook 
 exports.register = async (req, res, next) => {
+    
     var domain = url.parse(req.url,true).query.dname;
-        broker.start()
-            .then(()=>{
-                console.log(url);
-                return broker.call("webhooks.register", {url: domain}).then(resp =>{ 
-                    broker.logger.info(resp); 
-                    res.send({message:"URL added", url_id:resp})
-            });
-            }).catch(err => {
-                broker.logger.error(`Error in /register route - ${err.message}`);
-            })
+    console.log(domain);
+
+    //     broker.start()
+    //         .then(()=>{
+    //             return broker.call("webhooks.register", {url: domain}).then(resp =>{ 
+    //                 broker.logger.info(resp); 
+    //                 res.send({message:"URL added", url_id:resp})
+    //         });
+    //         }).catch(err => {
+    //             broker.logger.error(`Error in /register route - ${err.message}`);
+    //         })
 }
 
 // update the webhook data
