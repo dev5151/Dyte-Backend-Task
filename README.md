@@ -21,8 +21,13 @@ After starting, open the http://localhost:3000/ URL in your browser.
     Create a file .env in the directory and add DB_URL and PORT number to it.
     Start the project with `node server.js` command. 
 After starting, open the http://localhost:3000/ URL in your browser. 
-
-
+    
+## Services
+- **webhooks**: WEBHOOKS DB`.
+    
+## Routes
+ ![alt text](https://github.com/dev5151/Dyte-Backend-Task/blob/master/method-2/list2.png)
+    
 ## NPM scripts
 
 - `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
