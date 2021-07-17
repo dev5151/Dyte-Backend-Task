@@ -1,7 +1,7 @@
 
 # dyte-task
 <h2> Two Methods <h2>
-    <ul>Method 1 --> Using Moleculer template</ul> <ul>Method 2 --> Using Manual Mongo DB and Broker from Moleculer</ul>
+    <ul><a href="https://github.com/dev5151/Dyte-Backend-Task/tree/master/method-1">Method 1 --> Using Moleculer template</a></ul> <ul>Method 2 --> Using Manual Mongo DB and Broker from Moleculer</ul>
 
 ## Usage
 Start the project with `npm run dev` command. 
